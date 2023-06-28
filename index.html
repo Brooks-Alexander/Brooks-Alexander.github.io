@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Portfolio Website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./JavaScript/index.js"></script>
+    <script src="./JavaScript/WhaleTalk.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="Logo-Container">
+        <a href="index.html" class="logo-container">
+          <img src="./RESOURCES/Logo.png" alt="Logo">
+          <span>Alexander Brooks</span>
+        </a>
+      </div>
+        <nav>
+            <!-- Main Navigation inside <header> -->
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+      <section id="banner">
+        <div class="banner-image">
+          <img src="./RESOURCES/Headshot.png" alt="A photo of Alexander Brooks giving a commencement speech" class="banner-image">
+        </div>
+        <div class="animated-heading"></div>
+      </section>
+
+      <!-- About Me Section -->
+      <section class="about-me" id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-content">
+            <div class="about-me-text">
+              <h2>About Me</h2>
+              <p>Hello! I'm Alex, an engineer without a professional license from 
+                the United States. My life has been an intriguing blend of art 
+                and science, which has presented some challenges that I view as 
+                opportunities for growth and resolution.
+              </p>
+              <p>Currently, I am residing in Germany and plan to stay here for the 
+                foreseeable future. My time in Germany offers me a unique 
+                opportunity to immerse myself in the German engineering culture
+                and their disciplined mindset. I aim to draw inspiration from
+                this experience to grow my 
+                <a href="https://knowwhereusa.blog" class="know-where-usa">mutlimedia brand</a>
+                into a globally established media and technology
+                company, incorporating the knowledge and insights gained along
+                the way.</p>
+            </div>
+            <div class="about-me-image">
+              <img src="./RESOURCES/DJ LEXO.jpeg" 
+              alt="A photo of Alexander Brooks giving a commencement speech" 
+              class="portrait">  
+            </div>
+          </div>
+        </div>
+      </section>
+        
+
+      <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <details class="projects">
+          <summary class="project-title">
+            <h3>"Tea Cozy" Website</h3>
+          </summary>
+          <a href="https://brooks-alexander.github.io/TeaCozy/">
+            <img src="./RESOURCES/TeaCozy Website.png" class="project-photo">
+          </a>
+          <p>This is a required portfolio project for the Codecademy 
+          Full Stack Developer course.</p>
+        </details>
+        <details class="projects">
+          <summary class="project-title">
+            <h3>"Fotomatic" Website</h3>
+          </summary>
+          <a href="https://brooks-alexander.github.io/Fotomatic/">
+            <img src="./RESOURCES/Fotomatic Website.png" class="project-photo">
+          </a>
+          <p>This is another required portfolio project for the Codecademy 
+            Full Stack Developer course.</p>
+        </details>
+        <details class="projects">
+          <summary class="project-title">
+            <h3>Whale Translator</h3>
+          </summary>
+          <pre>
+            <code>
+  let input = 'turpentine and turtles';
+  // vowelArray is an array comprised of vowel sounds used by whales
+
+  let vowelArray = ['a', 'e', 'i', 'o', 'u'];
+  /*resultArray stores the vowels extracted from the input variable
+  that are found in the vowelArray*/
+
+  let resultArray = [];
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === 'e') {
+      resultArray.push(input[i]);
+    }
+    if (input[i] === 'u') {
+      resultArray.push(input[i]);
+    }
+    for (let j = 0; j < vowelArray.length; j++) {
+      if (input[i] === vowelArray[j]) {
+        resultArray.push(input[i]);
+      }
+    }
+  }
+
+  let resultString = resultArray.join('').toUpperCase();
+
+  console.log(resultString);
+  //Outputs: UUEEIEEAUUEE
+            </code>
+          </pre>
+          <h4>Try it yourself!</h4>
+          <input id="userInput" type="text" placeholder="Text">
+          <button onclick="returnText()">Submit</button>
+          <p id="output"></p>
+          <!--The corresponding script tag is in the head section 
+          of this html script-->
+        </details>  
+      </section>
+
+      <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-git"></i>
+          <i class="fa-brands fa-chrome"></i>
+          <i class="fa-solid fa-terminal"></i>
+          <i class="fa-brands fa-node"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-uipath"></i>
+        </div>
+      </section>
+    </main>  
+  </body>
+</html>
